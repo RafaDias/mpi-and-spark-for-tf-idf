@@ -1,4 +1,4 @@
-# Eventex
+# Mpi and spark for cosine similarity (via tf-idf vectorization)
 
 Project to check processing time using mpi and spark for text mining.
 
