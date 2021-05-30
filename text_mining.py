@@ -73,8 +73,15 @@ def get_similarity_items(n=1, similarity=None):
     return sorted(similarity, key=lambda x: x['distance'], reverse=True)[:n]
 
 
+def custom_tokenize(text):
+    if not text:
+        print('The text to be tokenized is a None type. Defaulting to blank string.')
+        text = ''
+    return word_tokenize(text)
+
+
 def pipeline_cleaning(text):
-    tokens = word_tokenize(text)
+    tokens = custom_tokenize(text)
     # convert to lower case
     tokens = [w.lower() for w in tokens]
     # remove punctuation from each word
